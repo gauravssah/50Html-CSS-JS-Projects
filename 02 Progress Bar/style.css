@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: blue; */
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.progressContainer {
+    font-size: 3rem;
+    display: flex;
+    /* max-width: 30%; */
+    width: 30%;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    background: transparent;
+    height: 2px;
+    width: 100%;
+}
+
+.progress::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: rgb(216, 213, 213);
+    z-index: -10;
+}
+
+.circle {
+    border: 3px solid rgb(200, 191, 190);
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.active {
+    border: 3px solid rgb(4, 213, 255);
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: 51%;
+    transform: translateY(-50%);
+    z-index: -5;
+    background: rgb(4, 213, 255);
+    width: 0%;
+    animation: circle1 0.4s ease-in forwards;
+}
+
+@keyframes circle1 {
+    100% {
+        width: 20%;
+    }
+}
+
+.inactive::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: 51%;
+    transform: translateY(-50%);
+    z-index: -5;
+    background: rgb(4, 213, 255);
+    width: 20%;
+    animation: circle2 0.4s ease-in forwards;
+}
+
+@keyframes circle2 {
+    100% {
+        width: 0%;
+    }
+}
+
+.buttons {
+    width: 15%;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    width: 8rem;
+    border: none;
+    background: rgb(4, 213, 255);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-weight: bold;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.end {
+    border: 3px solid rgb(4, 213, 255);
+}
+
+.disab {
+    background: lightblue;
+    cursor: no-drop;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        /* height: 100vh; */
+        /* background-color: blue; */
+        flex-direction: column;
+        gap: 5rem;
+
+    }
+
+    .progressContainer {
+        font-size: 3rem;
+        display: flex;
+        width: 80%;
+        /* background-color: red; */
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .buttons {
+        width: 63%;
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

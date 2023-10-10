@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.githubbtn {
+    margin: 30px auto;
+    background-color: black;
+    padding: 7px 28px;
+    border: none;
+    border-radius: 10px;
+}
+
+.githubbtn a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.conatanier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    /* background-color: rebeccapurple; */
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.box1 {
+    background-image: url("https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&w=600");
+    width: 8%;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box2 {
+    background-image: url("https://images.pexels.com/photos/930530/pexels-photo-930530.jpeg?auto=compress&cs=tinysrgb&w=600");
+    width: 8%;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.box3 {
+    background-image: url("https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=600");
+    width: 8%;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box4 {
+    background-image: url("https://images.pexels.com/photos/4491443/pexels-photo-4491443.jpeg?auto=compress&cs=tinysrgb&w=600");
+    width: 8%;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conatanier h1 {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.736);
+    padding: 10px 20px;
+    border-radius: 50px;
+    opacity: 0;
+}
+
+.active {
+    flex: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.active h1 {
+    flex: 1;
+    opacity: 1;
+}
+
+.box {
+    transition: all 700ms ease-in-out;
+}
+
+.box h1 {
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        flex-direction: column;
+
+    }
+
+    .box1 {
+        height: 40vh;
+        border-radius: 10px;
+    }
+
+    .box2 {
+        height: 40vh;
+        border-radius: 10px;
+    }
+
+    .box3 {
+        height: 40vh;
+        border-radius: 10px;
+    }
+
+    .box4 {
+        height: 40vh;
+        border-radius: 10px;
+    }
+
+    .conatanier h1 {
+        position: absolute;
+        bottom: 5px;
+        left: 19px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.736);
+        padding: 3px 12px;
+        border-radius: 50px;
+        opacity: 0;
+        font-size: 14px;
+    }
+
+    .active h1 {
+        flex: 1;
+        opacity: 1;
+    }
+
+    .githubbtn {
+        margin: 30px auto;
+        background-color: black;
+        padding: 7px 28px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .githubbtn a {
+        font-size: 17px;
+    }
+}

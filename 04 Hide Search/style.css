@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: chartreuse;
+}
+
+.container {
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 3%;
+    transition: width 0.3s ease;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    padding: 2px 4px;
+    font-size: 18px;
+    width: 12%;
+    transition: width 0.3s ease;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    padding: 2px 0px;
+    cursor: pointer;
+}
+
+.btn i {
+    padding: 5px 7px;
+}
+
+.container.active {
+    width: 16%;
+}
+
+.container.active input {
+    width: 100%;
+}
+
+.container.active .btn {
+    padding: 2px 6px;
+}
+
+
+/* ##################### 320px to 480px ####################### */
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 13%;
+
+    }
+
+    .container.active {
+        width: 70%;
+    }
+}

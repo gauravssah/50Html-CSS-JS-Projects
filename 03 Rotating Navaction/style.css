@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+    /* width: 100vh; */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /* width: 100%; */
+
+}
+
+.barcontainer {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 166, 0);
+    border-radius: 50%;
+    position: absolute;
+    /* top: 0px; */
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 5px rgb(158, 152, 152);
+}
+
+.bar {
+    position: absolute;
+    background-color: rgba(255, 166, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    transform: translate(-5%, 9%);
+    transition: all 700ms ease-in;
+}
+
+.rotate {
+    transform-origin: center;
+    transform: rotate(-90deg) translate(-8%, 4%);
+
+    transition: all 700ms ease-in;
+}
+
+.unrotate {
+    transform-origin: center;
+    transform: rotate(0deg) translate(-5%, 9%);
+    transition: all 700ms ease-out;
+}
+
+.bar i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.fa-bars {
+    position: absolute;
+    right: 20%;
+    bottom: 31%;
+}
+
+.fa-xmark {
+    position: absolute;
+    bottom: 27%;
+    left: 31%;
+}
+
+/* -------------------maincontainer----------------- */
+
+.maincontainer {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    font-size: 3rem;
+    padding: 2rem 5rem 4rem 20rem;
+    top: 0;
+    z-index: -2;
+    box-shadow: rgba(255, 255, 255, 0.598) 0px 5px 15px;
+}
+
+.boxrotate {
+    /* transform: rotate(-25deg) translate(31%, -12%); */
+    transform: rotate(-25deg) translate(33%, -14%);
+    transition: all 700ms ease-in;
+}
+
+.boxUnrotate {
+    transform: rotate(-0deg) translate(0%, 0%);
+    transition: all 700ms ease-out;
+}
+
+.imagecontainer {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.imagecontainer img {
+    width: 100%;
+}
+
+.maincontainer h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.maincontainer h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.maincontainer p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* -----------------navaction-------------------- */
+
+
+.navaction {
+    position: fixed;
+    color: rgb(255, 255, 255);
+    /* background-color: aqua; */
+    bottom: 0;
+    margin-bottom: 3rem;
+    z-index: -50;
+}
+
+.navaction li {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.navaction li:hover {
+    /* opacity: 0.8; */
+    text-shadow: 1px 1px 8px rgb(255, 166, 0);
+}
+
+.navaction .home {
+    margin-left: 2rem;
+}
+
+.navaction .about {
+    margin-left: 5rem;
+}
+
+.navaction .github {
+    margin-left: 7rem;
+}
+
+.navaction li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navaction li a i {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+.navactionhide {
+    transform: translate(-116%, 0%);
+    transition: all 700ms ease-out;
+}
+
+.navactionshoe {
+    transform: translate(0%, 0%);
+    transition: all 700ms ease-in;
+}
+
+/* ################################################# */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    * {
+        font-size: 50.5%;
+    }
+
+    .maincontainer {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        font-size: 3rem;
+        padding: 13rem 2rem 3rem 2rem;
+        top: 0;
+        z-index: -2;
+        box-shadow: rgba(255, 255, 255, 0.598) 0px 5px 15px;
+    }
+
+    .boxrotate {
+        transform: rotate(-25deg) translate(159%, -14%);
+        transition: all 700ms ease-in;
+    }
+
+    .navaction {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        margin-bottom: 3rem;
+        z-index: -50;
+    }
+}
