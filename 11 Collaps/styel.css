@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    background-color: #F0F0F0;
+    min-width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.container {
+    width: 50%;
+    min-width: 450px;
+    margin: auto;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box {
+    background-color: #F0F0F0;
+    border: 2px solid black;
+    margin: 2rem auto;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 52px;
+    transition: height 0.3s ease;
+}
+
+.box.active {
+    min-height: 290px;
+    box-shadow: 2px 2px 5px rgb(97, 97, 97);
+}
+
+.heading .fa-circle-xmark {
+    display: none;
+}
+
+.active .heading .fa-circle-xmark {
+    display: block;
+}
+
+.active .heading .fa-chevron-down {
+    display: none;
+}
+
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+}
+
+i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.paragraph {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    margin: 1.5rem auto;
+    position: absolute;
+    padding: 1rem;
+}
+
+footer {
+    width: 100%;
+    /* background-color: rgb(0, 0, 0); */
+    padding: 2rem 0;
+    text-align: center;
+    /* position: absolute;
+    bottom: 0px; */
+
+}
+
+footer a {
+    font-size: 3rem;
+    color: black;
+    margin: auto;
+}
+
+footer .heart {
+    font-size: 5rem;
+    color: rgb(175, 45, 45);
+    cursor: pointer;
+}
+
+footer a:hover .heart {
+    color: red;
+    transition: 0.2s ease;
+}
+
+/* ##################### 481px to 768px ####################### */
+@media (min-width: 481px) and (max-width: 768px) {
+    * {
+        font-size: 50%;
+    }
+
+    body {
+        min-width: 481px;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+        padding: 1rem;
+    }
+
+
+}
+
+
+/* ##################### 320px to 480px ####################### */
+@media (min-width: 320px) and (max-width: 480px) {
+    * {
+        font-size: 50%;
+    }
+
+    body {
+        min-width: 320px;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+        padding: 1rem;
+    }
+}
+
+
+/* ##################### 280px to 321px ####################### */
+@media (max-width: 321px) {
+    * {
+        font-size: 45%;
+    }
+
+    body {
+        min-width: 280px;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        margin-top: 2rem;
+        position: relative;
+        padding: 1rem;
+    }
+}
